@@ -1,0 +1,48 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net7.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <BuiltInComInteropSupport>true</BuiltInComInteropSupport>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+    <AvaloniaUseCompiledBindingsByDefault>true</AvaloniaUseCompiledBindingsByDefault>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Avalonia" Version="11.1.0" />
+    <PackageReference Include="Avalonia.Desktop" Version="11.1.0" />
+    <PackageReference Include="Avalonia.Themes.Fluent" Version="11.1.0" />
+    <PackageReference Include="Avalonia.Fonts.Inter" Version="11.1.0" />
+  
+    <!--Condition below is needed to remove Avalonia.Diagnostics package from build output in Release configuration.-->
+    <PackageReference Condition="'$(Configuration)' == 'Debug'" Include="Avalonia.Diagnostics" Version="11.1.0" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+    <PackageReference Include="System.Net.Http" Version="4.3.4" />
+  </ItemGroup>
+
+	<ItemGroup>
+		<AvaloniaResource Include="Assets\Backgrounds\day.png" />
+		<AvaloniaResource Include="Assets\Backgrounds\night.png" />
+
+		<AvaloniaResource Include="Assets\WeatherIconTransparent\default.png" />
+		<AvaloniaResource Include="Assets\WeatherIconTransparent\01d.png" />
+		<AvaloniaResource Include="Assets\WeatherIconTransparent\01n.png" />
+		<AvaloniaResource Include="Assets\WeatherIconTransparent\02d.png" />
+		<AvaloniaResource Include="Assets\WeatherIconTransparent\02n.png" />
+		<AvaloniaResource Include="Assets\WeatherIconTransparent\03d.png" />
+		<AvaloniaResource Include="Assets\WeatherIconTransparent\03n.png" />
+		<AvaloniaResource Include="Assets\WeatherIconTransparent\04d.png" />
+		<AvaloniaResource Include="Assets\WeatherIconTransparent\04n.png" />
+		<AvaloniaResource Include="Assets\WeatherIconTransparent\09d.png" />
+		<AvaloniaResource Include="Assets\WeatherIconTransparent\09n.png" />
+		<AvaloniaResource Include="Assets\WeatherIconTransparent\10d.png" />
+		<AvaloniaResource Include="Assets\WeatherIconTransparent\10n.png" />
+		<AvaloniaResource Include="Assets\WeatherIconTransparent\11d.png" />
+		<AvaloniaResource Include="Assets\WeatherIconTransparent\11n.png" />
+		<AvaloniaResource Include="Assets\WeatherIconTransparent\13d.png" />
+		<AvaloniaResource Include="Assets\WeatherIconTransparent\13n.png" />
+		<AvaloniaResource Include="Assets\WeatherIconTransparent\50d.png" />
+		<AvaloniaResource Include="Assets\WeatherIconTransparent\50n.png" />
+	</ItemGroup>
+
+</Project>
